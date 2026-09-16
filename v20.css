@@ -1,0 +1,359 @@
+/* =========================================================
+   KRAVEN GAME V20 — SIGNATURE LIGHT EDITION
+   A real light theme: depth, glass, premium surfaces,
+   stronger hierarchy, soft shadows, and consistent controls.
+   ========================================================= */
+
+html.kraven-light {
+  --light-ink:#182033;
+  --light-ink-2:#34405a;
+  --light-muted:#6f7890;
+  --light-soft:#8c95aa;
+  --light-bg:#eef2f8;
+  --light-bg-2:#f7f9fd;
+  --light-surface:rgba(255,255,255,.84);
+  --light-surface-solid:#ffffff;
+  --light-surface-soft:rgba(248,250,255,.88);
+  --light-line:rgba(31,43,69,.10);
+  --light-line-strong:rgba(31,43,69,.16);
+  --light-shadow:0 18px 55px rgba(39,53,84,.11),0 3px 12px rgba(39,53,84,.05);
+  --light-shadow-lg:0 32px 90px rgba(39,53,84,.17),0 8px 24px rgba(39,53,84,.07);
+  --light-glow:rgba(124,92,255,.18);
+  color-scheme:light;
+}
+
+html.kraven-light body,
+body.kraven-light{
+  color:var(--light-ink)!important;
+  background:
+    radial-gradient(900px 560px at 4% -8%,rgba(124,92,255,.13),transparent 62%),
+    radial-gradient(840px 520px at 98% 2%,rgba(24,215,255,.10),transparent 60%),
+    radial-gradient(780px 520px at 52% 105%,rgba(253,121,168,.065),transparent 64%),
+    linear-gradient(180deg,#fbfcff 0%,#f3f6fb 36%,#edf1f7 100%) !important;
+}
+
+html.kraven-light body::before{
+  opacity:.42;
+  background-image:
+    linear-gradient(rgba(59,72,102,.032) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(59,72,102,.032) 1px,transparent 1px) !important;
+  background-size:44px 44px!important;
+  mask-image:linear-gradient(to bottom,black 0%,rgba(0,0,0,.25) 58%,transparent 88%)!important;
+}
+
+html.kraven-light body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 14% 20%,rgba(255,255,255,.65),transparent 22%),
+    radial-gradient(circle at 84% 36%,rgba(255,255,255,.48),transparent 24%);
+}
+
+/* ---------- Header / Navigation ---------- */
+html.kraven-light header#main-header{
+  background:linear-gradient(180deg,rgba(255,255,255,.91),rgba(247,249,253,.78))!important;
+  border:1px solid rgba(46,60,91,.11)!important;
+  box-shadow:0 18px 55px rgba(48,62,95,.13),inset 0 1px 0 rgba(255,255,255,.95)!important;
+  backdrop-filter:blur(24px) saturate(145%)!important;
+  -webkit-backdrop-filter:blur(24px) saturate(145%)!important;
+}
+html.kraven-light header#main-header.scrolled{
+  background:rgba(255,255,255,.94)!important;
+  box-shadow:0 20px 62px rgba(48,62,95,.16)!important;
+}
+html.kraven-light .icon-btn,
+html.kraven-light .k19-theme-toggle{
+  background:linear-gradient(180deg,rgba(255,255,255,.97),rgba(244,247,252,.88))!important;
+  color:var(--light-ink)!important;
+  border-color:rgba(39,52,82,.11)!important;
+  box-shadow:0 5px 16px rgba(39,52,82,.07),inset 0 1px 0 rgba(255,255,255,.96)!important;
+}
+html.kraven-light .icon-btn:hover,
+html.kraven-light .k19-theme-toggle:hover{
+  background:linear-gradient(180deg,#fff,rgba(245,247,255,.98))!important;
+  border-color:color-mix(in srgb,var(--accent) 34%,rgba(39,52,82,.11))!important;
+  box-shadow:0 9px 24px rgba(39,52,82,.10),0 0 0 4px color-mix(in srgb,var(--accent) 7%,transparent)!important;
+}
+html.kraven-light .logo img{filter:drop-shadow(0 8px 18px rgba(40,52,83,.13));}
+
+/* ---------- Global surfaces ---------- */
+html.kraven-light .page-header,
+html.kraven-light .featured-slider,
+html.kraven-light .search-bar,
+html.kraven-light .v18-section,
+html.kraven-light .v19-card,
+html.kraven-light .k19-stat,
+html.kraven-light .k19-quick,
+html.kraven-light .stat-card,
+html.kraven-light .dash-stat,
+html.kraven-light .admin-section,
+html.kraven-light .news-card,
+html.kraven-light .review-card,
+html.kraven-light .comment-item,
+html.kraven-light .cal-item,
+html.kraven-light .k10-section,
+html.kraven-light .k10-card,
+html.kraven-light .k10-mini,
+html.kraven-light .game-card,
+html.kraven-light .featured-slide{
+  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(247,249,253,.82))!important;
+  color:var(--light-ink)!important;
+  border-color:var(--light-line)!important;
+  box-shadow:var(--light-shadow)!important;
+}
+
+html.kraven-light .page-header{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    radial-gradient(500px 240px at 0% 0%,rgba(124,92,255,.11),transparent 64%),
+    radial-gradient(480px 250px at 100% 100%,rgba(24,215,255,.08),transparent 62%),
+    linear-gradient(145deg,#fff,#f5f8fd)!important;
+}
+html.kraven-light .page-header::after{
+  content:"";position:absolute;inset:auto -10% -50% 25%;height:180px;
+  background:radial-gradient(circle,rgba(124,92,255,.10),transparent 68%);
+  filter:blur(18px);pointer-events:none;z-index:-1;
+}
+html.kraven-light .page-header h1{
+  background:linear-gradient(135deg,#172033 18%,#4f46c6 58%,#0385ad 100%)!important;
+  -webkit-background-clip:text!important;background-clip:text!important;
+}
+html.kraven-light .page-header p,
+html.kraven-light .featured-section-title,
+html.kraven-light .news-card-excerpt,
+html.kraven-light .news-card-date,
+html.kraven-light .page-header + p{
+  color:var(--light-ink-2)!important;
+}
+
+/* ---------- Game cards ---------- */
+html.kraven-light .game-card{
+  overflow:hidden;
+  background:#fff!important;
+  border:1px solid rgba(32,45,74,.09)!important;
+  box-shadow:0 16px 42px rgba(47,61,95,.10),0 2px 7px rgba(47,61,95,.05)!important;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease!important;
+}
+html.kraven-light .game-card:hover{
+  transform:translateY(-6px)!important;
+  border-color:color-mix(in srgb,var(--accent) 22%,rgba(32,45,74,.09))!important;
+  box-shadow:0 26px 58px rgba(47,61,95,.15),0 0 0 1px color-mix(in srgb,var(--accent) 9%,transparent)!important;
+}
+html.kraven-light .game-card-image{background:#e9eef6!important;}
+html.kraven-light .game-card-body{background:linear-gradient(180deg,#fff,#fbfcfe)!important;}
+html.kraven-light .game-card-title{color:#172033!important;}
+html.kraven-light .game-card-desc,
+html.kraven-light .game-card-genre,
+html.kraven-light .game-card-meta{color:#66718a!important;}
+html.kraven-light .game-card-chip,
+html.kraven-light .tag,
+html.kraven-light .badge,
+html.kraven-light .k19-chip{
+  background:color-mix(in srgb,var(--accent) 9%,#fff)!important;
+  color:color-mix(in srgb,var(--accent) 76%,#172033)!important;
+  border:1px solid color-mix(in srgb,var(--accent) 15%,rgba(30,42,70,.08))!important;
+}
+html.kraven-light .k19-game-actions .k19-card-btn{
+  background:rgba(255,255,255,.94)!important;
+  color:#1a2234!important;
+  border-color:rgba(25,37,64,.12)!important;
+  box-shadow:0 6px 16px rgba(28,40,68,.11)!important;
+}
+
+/* ---------- Buttons / controls ---------- */
+html.kraven-light .btn,
+html.kraven-light .page-btn{
+  background:linear-gradient(180deg,#fff,#f3f6fa)!important;
+  color:#24304a!important;
+  border:1px solid rgba(30,43,71,.11)!important;
+  box-shadow:0 6px 18px rgba(37,52,84,.07),inset 0 1px 0 #fff!important;
+}
+html.kraven-light .btn:hover,
+html.kraven-light .page-btn:hover:not(.disabled):not(.active){
+  border-color:color-mix(in srgb,var(--accent) 28%,rgba(30,43,71,.11))!important;
+  box-shadow:0 10px 24px rgba(37,52,84,.10),0 0 0 4px color-mix(in srgb,var(--accent) 6%,transparent)!important;
+}
+html.kraven-light .btn-primary,
+html.kraven-light .page-btn.active{
+  background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent3) 34%,var(--accent)))!important;
+  color:#fff!important;
+  border-color:transparent!important;
+  box-shadow:0 10px 26px color-mix(in srgb,var(--accent) 25%,transparent)!important;
+}
+html.kraven-light input,
+html.kraven-light select,
+html.kraven-light textarea,
+html.kraven-light .search-input-wrapper{
+  background:rgba(255,255,255,.95)!important;
+  color:#1c263b!important;
+  border-color:rgba(31,44,72,.11)!important;
+  box-shadow:inset 0 1px 2px rgba(31,44,72,.035),0 5px 18px rgba(42,56,89,.045)!important;
+}
+html.kraven-light input::placeholder,
+html.kraven-light textarea::placeholder{color:#98a1b3!important;}
+html.kraven-light input:focus,
+html.kraven-light select:focus,
+html.kraven-light textarea:focus{
+  border-color:color-mix(in srgb,var(--accent) 48%,rgba(31,44,72,.11))!important;
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 8%,transparent),0 8px 24px rgba(42,56,89,.07)!important;
+}
+
+/* ---------- Search ---------- */
+html.kraven-light .search-bar{
+  background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,249,253,.92))!important;
+  box-shadow:0 16px 45px rgba(45,59,92,.08)!important;
+}
+html.kraven-light .search-icon{color:#6f7890!important;}
+html.kraven-light .search-hl{background:color-mix(in srgb,var(--accent) 10%,#fff)!important;color:var(--accent)!important;}
+html.kraven-light .k19-command,
+html.kraven-light .k19-preview,
+html.kraven-light .modal-overlay,
+html.kraven-light .search-overlay{
+  background:rgba(233,238,247,.58)!important;
+  backdrop-filter:blur(18px)!important;
+  -webkit-backdrop-filter:blur(18px)!important;
+}
+html.kraven-light .k19-command-box,
+html.kraven-light .k19-preview-card,
+html.kraven-light .modal,
+html.kraven-light .search-box{
+  background:linear-gradient(150deg,rgba(255,255,255,.98),rgba(247,249,254,.94))!important;
+  color:#182033!important;
+  border-color:rgba(31,44,72,.11)!important;
+  box-shadow:var(--light-shadow-lg)!important;
+}
+html.kraven-light .k19-result:hover,
+html.kraven-light .k19-result.active{background:color-mix(in srgb,var(--accent) 8%,#fff)!important;}
+html.kraven-light .k19-result span{color:#727d95!important;}
+
+/* ---------- Sidebars / menus / dropdowns ---------- */
+html.kraven-light .sidebar-menu,
+html.kraven-light .dropdown-panel{
+  background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(247,249,253,.97))!important;
+  border-color:rgba(30,44,72,.11)!important;
+  box-shadow:0 28px 80px rgba(38,52,84,.18)!important;
+}
+html.kraven-light .sidebar-header{
+  background:linear-gradient(180deg,#fff,#f6f8fc)!important;
+  border-color:rgba(30,44,72,.09)!important;
+}
+html.kraven-light .sidebar-nav a{
+  color:#5d6881!important;
+}
+html.kraven-light .sidebar-nav a:hover,
+html.kraven-light .sidebar-nav a.active{
+  color:#1d2740!important;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 9%,#fff),rgba(255,255,255,.72))!important;
+  border-color:color-mix(in srgb,var(--accent) 14%,rgba(30,44,72,.08))!important;
+  box-shadow:0 7px 20px rgba(43,57,91,.06)!important;
+}
+html.kraven-light .sidebar-footer{border-color:rgba(30,44,72,.08)!important;color:#7c869b!important;}
+
+/* ---------- Featured hero ---------- */
+html.kraven-light .featured-slider{
+  background:linear-gradient(135deg,#ffffff,#eef3fb)!important;
+  box-shadow:0 24px 70px rgba(41,56,92,.13),inset 0 1px 0 #fff!important;
+}
+html.kraven-light .featured-slider::after{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.45);
+}
+html.kraven-light .featured-slide{background:transparent!important;box-shadow:none!important;}
+
+/* ---------- News / detail ---------- */
+html.kraven-light .news-card,
+html.kraven-light .news-detail-hero,
+html.kraven-light .news-detail-content{
+  background:linear-gradient(145deg,#fff,#f7f9fd)!important;
+  color:#1b2539!important;
+  border-color:rgba(30,44,72,.09)!important;
+  box-shadow:var(--light-shadow)!important;
+}
+html.kraven-light .news-card-title,
+html.kraven-light .news-detail-header h1{color:#182033!important;}
+html.kraven-light .news-detail-lead,
+html.kraven-light .news-detail-content{color:#40506b!important;}
+
+/* ---------- Admin ---------- */
+html.kraven-light .admin-container,
+html.kraven-light .admin-panel,
+html.kraven-light .admin-tabs,
+html.kraven-light .admin-table{
+  color:#1b2539!important;
+}
+html.kraven-light .admin-panel,
+html.kraven-light .admin-section{
+  background:linear-gradient(145deg,#fff,#f8fafd)!important;
+  border-color:rgba(31,44,72,.10)!important;
+  box-shadow:var(--light-shadow)!important;
+}
+html.kraven-light .admin-table th{background:#f0f4fa!important;color:#33415d!important;}
+html.kraven-light .admin-table td{border-color:rgba(31,44,72,.07)!important;color:#536079!important;}
+html.kraven-light #kraven-content-sync{
+  background:rgba(255,255,255,.96)!important;
+  border-color:rgba(31,44,72,.10)!important;
+  box-shadow:0 24px 65px rgba(39,53,84,.16)!important;
+  color:#202a3f!important;
+}
+html.kraven-light #kraven-admin-save-bar{
+  background:linear-gradient(135deg,rgba(124,92,255,.09),rgba(24,215,255,.06),#fff)!important;
+  border-color:rgba(124,92,255,.19)!important;
+  box-shadow:var(--light-shadow)!important;
+}
+
+/* ---------- Footer / utility ---------- */
+html.kraven-light footer{
+  background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(239,243,249,.91))!important;
+  color:#68738a!important;
+  border-top-color:rgba(31,44,72,.09)!important;
+  box-shadow:0 -12px 36px rgba(38,52,84,.05)!important;
+}
+html.kraven-light .scroll-top-btn{
+  box-shadow:0 15px 38px color-mix(in srgb,var(--accent) 22%,transparent)!important;
+}
+html.kraven-light .toast,
+html.kraven-light .k19-toast,
+html.kraven-light .k10-toast{
+  background:rgba(255,255,255,.97)!important;
+  color:#1d263b!important;
+  border-color:rgba(31,44,72,.10)!important;
+  box-shadow:0 20px 55px rgba(38,52,84,.17)!important;
+}
+html.kraven-light .loader-spinner{border-color:rgba(42,55,84,.10)!important;border-top-color:var(--accent)!important;border-right-color:var(--accent3)!important;}
+html.kraven-light .loader-text{color:#66728a!important;}
+
+/* ---------- Better theme switch ---------- */
+html.kraven-light #k19-theme-toggle{
+  min-width:138px;
+  justify-content:center;
+  border-radius:999px!important;
+  font-weight:900!important;
+}
+html.kraven-light #k19-theme-toggle::after{
+  content:"";
+  width:7px;height:7px;border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),var(--accent3));
+  box-shadow:0 0 0 4px rgba(124,92,255,.08);
+}
+
+/* ---------- Mobile premium presentation ---------- */
+@media (max-width:800px){
+  html.kraven-light header#main-header{box-shadow:0 12px 34px rgba(39,53,84,.12)!important;}
+  html.kraven-light main{padding-top:118px!important;}
+  html.kraven-light .page-header{padding:27px 20px 24px!important;border-radius:24px!important;}
+  html.kraven-light .game-card{box-shadow:0 12px 28px rgba(45,59,92,.10)!important;}
+  html.kraven-light .game-card:active{transform:scale(.985)!important;box-shadow:0 8px 20px rgba(45,59,92,.11)!important;}
+  html.kraven-light .k19-theme-toggle{min-width:44px!important;width:44px!important;padding:0!important;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html.kraven-light .game-card,
+  html.kraven-light .btn,
+  html.kraven-light .icon-btn,
+  html.kraven-light .k19-theme-toggle{transition:none!important;}
+}

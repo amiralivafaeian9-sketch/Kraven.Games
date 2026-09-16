@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="kraven-version" content="V25">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script>(function(){try{var m=localStorage.getItem("kraven_v21_theme")||localStorage.getItem("kraven_v19_mode")||localStorage.getItem("kraven_theme");if(m==="light")document.documentElement.classList.add("kraven-light");}catch(e){}})();</script>
+    <title>Kraven Game | پلتفرم حرفه‌ای بازی‌های ویدیویی</title>
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAeFklEQVR42s2bZ6yk13nff6e8ZdrtZevdxl0ud0Vyl6RIFUqiTNmUQ7nAcgvs2PEHG3BgG/lgIEiCJC5BnMRIQWIEsB0XSHbsILIsRJEh26RlUyxmEeuSu9x6e793Zu6Ud95yzsmHM3d2l0WiKCrxABf34s7M+77nOU/5P//nfwTg+Da+hBAIIQBwzuGce0ff2X29k89/S8/37TDA7qKttW96L9CaKI7RWtNsNnHOMTo6ijGGNE3Jshzn7Fsa5NthDP1eL/yNOz05OcnU9BQzMzMoqSiVSmitaLVafOlLf4YQgrvuugshBcYYsjQjSRK63S71ep16vU6WZTfd4700xHviAW98qPHxcc6ePUttaIihoSGGajVAMDs7i7EGcLxy7kUW5pYBmJk5yN59+1hdXUUrBX0PKpVKxHGMKQqWl1dYX9/AWvOeGuJbNsCND3L48BFuO3WS8fFxDh48yNLSMt1Oh8mpCaw1WGto7eywsDTH+Qvn2d5oAzA0XOXAgQMIJNZ67zHW0O12KJVihoeHcA5wgnq9weLiInmevyeGeNcGuPHGBw8e5MSJWxkeGSHNMrQSjAyPsH//Xi5cPMf80izrm2ts1xu0d3IoQAhw5g1PISGIFFEYUS6VGK6NsG/fNJub27TaLYqiYGx0nGq1yurqOvPz81hrvyUjvCsD7N6wWq1y6vRpzpw5w+uvX0RpxfTkOI1mneWNa9S7CyR5jySBPIGiC64QfuF29/bgsAgECAfSG0JFoCOIS4qSHKasRilXIrrdFmlWMDw8ihSK+fl5ms3muzbCu/aAvXv3MnP4MK12m9GRYQ4eOMjKyiIb7ddx8ToW2FmH5pqk1wJr3U23klIihAQB1pi3eHiBjqA04RjeB1EJ8kYNnU9Q0gE7O01witGRcba2tllaWvqGuelbMoCUEmstSikOHznC0PAwq6ur1KpV4rBEyyyjxteJNGzNCtbndhfdv5EU/fIocc4NfkvpvcCXTIfrf+fmBxeMHoKDZxy1YVi5PETc3kOepmxuNJmenqaXpMzNzfWvLRDi5vu/awPUajWSJKEoCrTW7Nm7l7hUptGoUy1XSHoJRXWV2hS0FgVb8wwuKfqLE0iUVkgpUUr5awUhRZ5jigIdBBRFgeyXQtyuESwIGMCCGA6ekhw5a1m6Kkhm91DWMRubW5RKZcqlEisrKyTdHgAj00MUiaG903l3BhBCUKlU+PD9H6bVavPkE0948BBoatUhenlCOJ6ghWBr1i9cCAYPrZTyuyEVUgqiKEbgyPKCOI4QQpBlOWmaEgQB1lmctd4bhMMYg7MOIcGJvlFyoAoHTghs4Ejmq1TCIZK0Q1wK2d7u4Kzle37kNhoNwWNfepWsl71tKLyjECiVYv7hT/0UJ0/exmc/+1mee/ZZ/+UYAqnJugYhnF+4E+wCWa01CIFSCq01cRzTarUJw4AoivwCHVibEYQhvSQbxG1R5BhrsMaiYh9+JreoCKwFl0A0LIhGHb2GwuQCrQR337+HH/iZSc49u8bv/9pSP9m+R0nwBz79ac6+/z4a9W3OvfwSj/7lIxSFr8dBGGKt9ZZ2DqnUINa1UgRRiLOWoigIgoBSqYQxhiRJQEAUhWit6HQSnLUgBMZarC1AOGTssMJhM+e9S0uKwoKBaEzz0Y8d4u4HhikdXuFrf7HD//5Pnb4XDyLq3RlgaGiIPPduKpXkttN3UK7VeOi7vpNDMzM88djf8IUvfIHtrS0AwjDE2N2y5hOflJI4jsjznEqlQp7nJEmClArn7OB/1vn4zwvvGUFoyJ3F5A4ROmTFQSFxOHLhiKqS7/yOo3zg42M01TptsUByMeAP/22G7flQTXvZ191UBfzS22H6Wq3G6NgonU6375YF1UqZUrnCk08+wbVrs9x+++383M/9PEePHmFubo7t7W2ctYRhiJASZy1K+8RnzC6MvY74pFJY4+GxkpI0ywcVoTpkSXqOaA/omkBoSGNHPAOf+uQZfuEXTnP4/S2eeP012mabva7MH/z7gu6WAeGo1YYQCIqi+OY8YHfXjt5yjHq9gVaS9fUN/1HnePC7PolxjsuXL7P/wAGmJib58Afv4+yZM7z4wgv8zu/+LhfOn+/njzIOh48Mv+hSuYSzjl6vRxyHWGNJMx//Sksc1ifE0CIUxHscbtRRKHjoI3fx4997lsrELP/n6ae49HqXoVE4eaTMH/6KYfZrKVIL4jjGOUGtUmVra2tg/G9ogN0ktG/fPlQQopRgp71NK29SNP2OTk1PceqOM7TbbQ4cOEiW9tACRkeG+cQnPsGpU6d54skn+e3f+i1eeeUVACrVqk9kxiJEv2Xu37O4AQgJCWFZkZsCPWIR4xYbwMM/dBs/dP9HOXSkwbmNR3nl0iavvQJWCg7s07z2BcWzX+whlUDEjliW0DpECoVWko2NzbcERjeFwG7CKJfLjE9O4kSBUoJ0dJW8Lih6DiEFnXaH8fExdBCyvLTIUK3Kvr17wDkuXDiPc5ZPfep7+JEf+WHOnL2LpeUl5mZnKfKcMPbJsigKgjBESEGe5d7rFOhAYqVFxBY1AvtvH+Fj332cn/3+OzC1x/j9Rx5nc6NLt6MQkcca288HPP65HtL5CqEDgRrPqahRHIZKpUra671lKLzBAH5PDhw4gHGGaq1CrzaP0AWNK353nPWf29ra5ODBgyTdLkm3w9bmFjMHD3Lq1G2cOnWaudlZtre3eeCBB/j0p3+Qu+++m6XlJdZWVlFaD3IKOILQ0xJhLBEaiqJARI6optDtiNtmJJMnznFuboVOS3P1KqytOeJhGG7H/PnvpJju9U00uWDoAEQjjqgYIen1GKrV2Nlp3cQ24duOG3ffUS6X0WFIFIWkssnk0R4br4o3lZO0l7K6usjMzAy279Y7rRZBEFEUBaVymcNHjnD58iVmZ6/x0EPfxR13nKKX9pBSIqX0wElCnhf9kpiTFTlBzcPYxmzBAx/cw73fnXFxuUGSBJSHHUhHO3PoVswjn8np1fsYZBDPjp1ZweStHaKxHCUFQkpKpfhNIaDfmA6mpqf9RZRkZKbOzooibxs8qhW7DRxCCGavXuPYsWOcPHmCZqOJ2CU9ioKzZ88QBAF79+6n10t4/vnneeaZZwAwtmD3cbM0ByGQyqFivyWFsKia5p/+0r0c/PASF5eWaG5qzl/xoaJLjjPvK/H07zlWLxRIcQPecSAl5B1HsgWTJxsUO9N02h2GR2skSe+mXCBvJB/DMKBaG0Jrja4mTE1VuPZy3/WFd5MgDAZuVOSWC6+/wsGDexBCUK/XSdMeCOilKUm3y8L8HGtra4RhyNBIDRxkaY41FqmkT1oSUAJVhjywBOUSv/4f7ufEJ2b56otzjMRlrABnBfWWY2w8YO2pkAtP9rxnckMqFz4PCODai4LJ6R7lqRyQ6EARhOomL9A3Zv7RsXGKPg6fOOBobEmyLeM7NimQQmCNvaF2CBbnV3j1wjkOHT5OfbvugZAxNBoNtNaYwiCk6DdB11mcwhiEhaCs+tgfkswyvrfKf/mNexCHXuNzf7ZOHElKFcvolGO049hTlrhLmr/8XBNhdzfvescppTeACiBdd9RXA6aOdGgsebBVrZWob7UHIS1vvEJcigm0hiBjan/I1UutwdvC+Qc3N3ByPuHA6xdfYXx8mOHhEX+dOKbbTXj11VfZ3Nroo8kMed3fCEONDhQ4hwogV4aDh8b4tf96FnH0BZ57ZZ1OIqkOCZ67kHLhku8Dxk3M4/8zx9TfvHgdSYSS4MAanxcuvwrTByxBzSfwKIpu+p7c9R6tNUEQkHQS4uEcsKxe7aArAqF8EjGFvc7iuOspZ3lhm79+7Cvs3TvN0WPHyPOchYV5jxyrNa5cucL29jZKXc/AxhjfDAlHb8dw66lp/tVv3M7zjef42+eaiEAyMelIMsf8CvSs48i+iGc/b1l73cc9/R+phW+lc4szlqAssAaEgtW5AiEShiZTj0BxKC2vV4HdeA6jiDRNKWzOyLRjdbmDa4Mo/E5LJQdfdM4TJLtWzFPBU49/jd/6779JrVpB64Dl5WUuXLjApUuXeO6551hbWyWM5MB41jlUJMjahlP37OOXf/MEL9Wf4tzLCZubmlpVMjoGMnAMjzvO3B3g5mNeejT11xA+2Xkb+BC2BUzsE8Ql34OoQGBbjpWFgrG9PXJjUVIRxcGg8g1MEccROEdhcyojKUtz3seKzIETSOXhsaB/ca2Q/X7fOUutVsUUjs/9yef6O2wx1tJutQnD0BMn1gxCQEWCrGO4++MH+Jn/dJDHV55kZSFDKEEmHLkFEzmiYTgwHPLSHyg+86ttXOKISqAUGCMG3IMQEh0qmluKTsM/725iXJwTDI0XoAxZmvv33lgGoygi0AGZSsnsFhvL1pvHeRyfJQVCgtLK9/eBwhSJDw1j0FryEz/xY2xv7bC5udGvKiFLK8t02m0qleOkiUdiQgvyjuG+Bw/z/b80xuMXn4Ec5q5J9h9y3HKrIXeS24IpltYTPv8fUy493bsePgVYJ1BagBM468GUCiVpxyCl7eMLHyLrS44Td+aEZUuvfp2Gcw70bknQWvv2lB7r9YLOtiCIFSaDKHbEcUir6fpx7DyReUM2sRaiKObkbfsG053Z2WucOXMnoyMjWOsQ0iEUFD3DBx46wsd+dog/+5vnCYSgvS3Y2nEcf7/j2GSN//GvC57Kerz0WIedNUsUBSjt6HYKihxkIPzOS4EOFdY6ik5OWA7IuhaT+UZKBoJ2HTaahqhkMe2A/AZIPCiD1lnyrEBUDPV1sF1HUBHossJkFucUYegw1qKUJOn00IHut7JgbEYQQpZmzM3NsrGxQRRFZFnGzMw02/VNkqSDM/Chv3cLH/1HMV/+yktk2wIdg4zh2D2OW2Yq/NGvaB77fBtTJGAkx0/tp9c1rC5vep5RuL7hfWmWSvhKZQXOWoSUYBxhWWEKQ952bG+ACCzOCoxxgzKoPeMrCLTC4sFLNu9jyuQOJxxKabptQ20kJu3mZFmO0oo4juj1ep4t1pLF5VmUHWF1bY1KtUIUhiRJQlyKePRPH+HFZ69y18dv4fYf07w8fw4ySW3K0e7CLXdZPv6BKn/8Lx1P/FEdEJw6M8Ppe8c4/9IGly+sDnZ8d+FhWYOUCBxJqyCuBBSpIQgVYcVXLZs7KBz1ayDzLjoSOKkGBhCA81leYIobeHstkcKzuTpQlCuOrKcpCkOa5N71tMZaS5amA3R1773v58jRYzTqdcYnxjh65Ah/+8xTPPIXX+HO+w9y6idLzC5dpFaRpKlj/pJg6JDjk58o89X/LHj6ixkPfu9hbv1YjA67/MG/m2PjWj5AfEqBtZJSxdNieSExqUGH2i9ISIRyFHlBkfbDVDjcDY2gkANqw3uAUpqJiQmSXkJrp421vj93os/TO0HSlQRaMzk9TKvhGaJWq9MPAYEOFB/4wAcxpiAMAqrVKmEQ0ksTDh8+zMjoKMtza+yZKyikYPGKAyEIJyzHDwle+b1h9o3t4V/8SYtjH27z6B/O8fs/n0IOUaRIU9OPd8gzSHs++TmbE1dCKiMhtrA4Z2k3DKawu1FyPd61YnxiDKU062vrFIXx7bCUgrGJMQ4fOowc6mLDhGzH138dKISEQIWUSjFSSHCOdqvb3xGFMYYwEvzYP/hRRobGmZ27xr69exkaGsJaw/HjR7jnvjv5ypefZ+mljBNnFZupY73l+MjHhnlw4jiTJ0OGHlyhqRb54q+3+OK/MYyP1Th26z52Gj2KwnjkWQhk32OlFIQljdSCrOuYmC6Rpxm9ru8ybWHRscQVMHpUMHNigkN7j7G9vU273fHk6i4f4ICt9TpyKEOMZHSXBTr0g4w4jghCxf6ZMfLc0Wy0SNOcOIrIiwJjCqJYY13OtSuLtFo7aC05fHiGMNTML15DScFOZ4vZS+u05gWnH5R84IGY+28f5VK2xfnWAlevdLn6mZCVp0b5vp+e5GMP7+OvvrhAe6fb30kf+/0JBMZYolJAFAcEgaLbKei2LeAHpjry/IJJLdN3gskNrz29RC9LKHILuyHgnPNWDQMiaamMwqYCoQS9bo4tHOVqzObGDrVqlTAK6HZ7pDcIF6SUlMtl1ldWCUNNqRSxsbnBzs4O3W6btdVtdtpbCAHrc4btl0v8xN/fy2ceuUK7AdVRxenSNCunI45/b0E4WqeTGqKyxW2BCgU28wNTHGS5QwqBw5H1DEGkydOCypCmKCRSQaeZ+eZNCmojDpPGxGWLtSlZPykMPCAuhTgnKA1J9hxLWLgM0jrKNUmagDWWLC0ockMUh4RBSJqmWGOw1hHFiuPHj5L1HLWhKuNjoywsLNKoN8jSjCzL6aQNNlZ3CGLB6nrOS+e7fOhDNerdFOFgZSelU9vi8qUmV15LSVSPjz40w9Wnu3RbBbqPS6z1yVBqiQ4kUimK3JCnljCShP2cYa2hSCx6WHDHvTFbS5rmag7Sf/YmPiAvCpwzFLlkz+g0Y3s1rnDEFQ+InIM0zdjabNDa6WCMt6BUkt1SGschE5NjjI+PcG12nuXlVYw1NJo7pFmK43orna/Bxc+nfOW/9RgKFFdet8ydT5l/EVQhqQ1L1mYzLnYW+YF/NkOt5rlEGYLQ3jtxjiLzpEqvk1GqKsKSpr2T0Wn0sFhEBSb2aSaHJ8nays/lb+ADBgYo8pzCGIo0J9CjHDkxQlHA5opBaUdUkgghCKMYgKTbwxiLc6JvCKiNCQKtWd9YZ2lpdTBbLIqCwhT+xg7yFEQfab/45R7P/7ZhWkvaTUF3G9LUEUSO2qhk9mLC+cYKP/xPjhIEEqRDBg7b/x1WfBcIEFV8QrbGorTXIbgU9h6s4AjotT1EvqncX8fXBqkg61p6ScLh4yNQAR1A0spwzhLFIZWqwJgCqRRBoActcRjErK00WV1dp9tNB1qeXtLrawEEeeZuYp9tn7669qxj83E4tE8ga7CzAJvzgHYoK3nt+RYXk00++qN7KIRDlAQycjgNvcQglCCqatqNnKIwVMYUuix9DVQwc3iYxqYh6/mwMMa+hQcUFpwh78HqfMLEVJXKiMT08UCWWpJO2pewWT/WVmpAjqytNPjqoy8ThAFJp0eapuBge7uOVhpnPQy9kYTdBSNCwOtPWVpPQ8VCoiBNwCmQkWNqRvL8i5tMnHb8/C+eJFOWYAScckTjjqiimNzjZXmlIUWeWo8CnaU0IZneX2NjKSXt5gjp3toD/JTWf2lzwWGKghPvG8Ua3z0VhUFFjnbLYY1feJpl/UU4Hn74Ye6//yM0Gg16aUqpVCLLM/8ZAVle3GSAG++7a4TzT1rEnGDmVkEewcZV2FqAdtuxf7/kKy8uc/pTkn/+y2fpaoEIwBiHwZA6yeiBkHYjo9vOUZHA5XDLrSOYPGNjLvU0fL+7fZMBPNWdIRU0Nwzzl9scP1mFcBdNOfLMkOc9lJaEUYhAkOc5Y2Oj7Ns/xSvnzpHlOVprsjTDGEspLtFpd2i32ghhBsjsrSa2QsDFJyzVOcktJySNDYdNobUI27OOSiz446++xnd+v+STPzhOVnaokmNkxtFp5aRJQbeVe21B6hAVOHFSsTzbpbFRIJX19Z+3MYAHB4ZeN2f2nEHIBnsPC4z1bqaU9OWmPy3eVYKeOXs7r756nkajDs4PNpxwTIyP0W63abZaHsSo6xT8YD4hbh5hOwd/+78K1FXBoTskWeHzBBEEVjB3Hj771+f5yR+fYPj9AfIAGGtobebkJkfF/eFI6pjcA0G0w+JFS7eborWgyN3bG8CXuhxjc7YXE+YuS47d5UALnyMQRKVwMOT0nF+FodowKyurVCsVer0eSZJQKZdZ39hgfWODTjuh00kI4gL67q6UGiTHG0cTQoIO4Wt/WjCxozhwB0Sj4HrQ2XHMzEhen+vS6LX5xZ+eppk5tjYgnhKEo85Pna1Xo00fhYVrVVZnE4S0WGPf5HnyjW6YpQVKQbfbZeV8FecCDt0JWc+S93KK3FAURf9ijhMnTrCyuk6j3kT2py9BoGm3O3Q6XfLcEASCuJZjaXs2pk+LIxhA25umNUqw/4TiEw/s59RtQ3QLR2ocvbZHfq11wVdfXuTD74u5/zsi2O8IhxztTYcu+eoyfMghS5qNKxHNRgutoJfYd6APcCCkQ+uAomfBDjF2tMXaFYF0ftec9fqdUqnEfffdyysvv4LWitpQFaUk7XaHRqMJwPBojNA5a0vbrC0Uvl3tj+F2qXUhfQxo7b0wz2B7yfHsky0OTJX56CfHECM9gmFDfVVSZILUOU7emvLxu/bypZfrJHMCuwMu89c7eAcU65NsLHQwtsAW9k3u/7YCCWscQSjJshyZVzBaUprq0ZgTCFxf4GC55fgtZFnO4tIiURyRphmNRpM8L6hUY5Q27DR32N7oYorr80cpJVprnPUUmzX+/1F8c1VIdxwXn03QOB7+vr3c837N5naHeNhx6n0KGabsG9NknYAXn+kRFYKsJZg47lCmQm8lZLveIAgEva555wqRXd1eGGrSLCXOpxDlhNzkZC3/sEEQcPK2U8zOzpJlKXlh6Ha6hGFApRrS6yVsrjXJs5vdTmmFwzcyCE9qeL5QkGf9xSsPr4T0GGPhUsYL53e459QoD358mNKY7y1GqpLVZsIHT+7hmefabF91VIcdYUkhtsfY3NgkCKQHQIZvzgDOgpRewJtmPaJ8kiJqY1KHzR1Hjx1Dac3iwgJhGGOMoVKNEcKyuVGn0+695RkCKYWXxfRFjMZYlLrO4w88QPkfBARV6DUdj35ph/Pncj5y3zQPfaDC05fbfPmvLFbn3HN6gief2KFckqj2KM3t5kB2l6fum9MIXYfHjkALsrxA4CiJEdpJC4Xm1ttOcfXKZRBe0lIqhXTabRr1tt9RcbMORYrdjO/nCLsyWZxPhOIGdahQEql9z48EicC2QfYE60s5jzzapNkoceeZUUQp57Gnu5x5XxllFa8/m6OtpdvxZS/t2m9NJicERFGAsVCpVGnWGxw6eoRyucLC/DzDIzXarR2azdZA5vpGwYWUom+UvnIMUEpirEVr38o6Z6/vvCediGsC6RztpqfT2Q2P0JfF6TtCHv7xEfad6dDMuhyV+/nVf7zCzoJBW0nasXwj/fTX9YDrczyv9Oq0OyitOH78BGtrqzhnaNQbdNrdtzTjgHnddQfhjbGrH9yVG1hr+3R3vzYr/3eROvK0v0XKd5wOEAakFbSWDC/8dYfOhuT2W8tUDyXUwhovPNrFFbxt3H/TBrh+DAbed/p2nLOsr67SaDQH0+LdBe9KZW9Gd84DH+W3VvanSbvlVPV5fanF4DO2cCgNQUn4CrILlBzYPhFVnQBXwOI5w5N/XkBmefiHS7x2ETYv50jxjVWg78gAu/qB4ydOUKlWeOH550nTFCEEURxSmxIIbcmTPsyVfXV4P7ntkrOur2S4LlBwNwWjNZ7ItNbvtggEMvSWdQ5sDs4IxmZg7wmQlHGFwvSZn0vPWi68lPGhh2pcfb1Hb+cNuejd5QC/+KmpKfbv38+LL77YF0X7hwqCkOGRIcZmwEYNNldy6stAxgDp7Z4O2c38N54q8yEBDjeAyfQnv04ILF7FICuwdx9M7AchQjqLI2yvZTSbO3238BDYGKiMCw6eElx51lL0vv4C35FWOAgCRkdHWV9fv4EEFf0RuY/nkeEJ9h8ZZuzYNpVqk5WlElcvd6kv55D4ebaQDMYxuyNt8PB218UHsgMBlGF4QnPsdIWZmZAi77GxXGZzVrO2UKfb7XphpXMDlDdQiCiQ2rNP37JY+u1OXggh+ioPPPkQV5mcmmbqiOXIHZqhsZiFK9tcOr/I6ryjXQd6X/8QX1CB4XGYOR6xf2aa4ZGQXleyvliwvWJZn2+xvdlAyL4YKjO88XjiNxJIv+fH5rSW6OC66ECpiKHxmMl9VSanh4krbbIiobnTpbGT0NoxbF/N6bX9rYemFKMziqFqwOiIplwBpSuk3SHqmynrix3STk57p+sleVKQZ8Wbevv/7ydHg1AT9lVkHklKwjgkjmvEUUQch4SxIixJLrx6kea2l7Tvn5nmwMH9pElBXhjSIqWXdsmSlLSXXT9OYyxZlpNnhvfq7OS35eis1oow0iil6Ev/BxBXq8CXQZvS2vHyzj17p+klGcYUfRBkrtc9HM5Z0iQnzw1/p4/OXidYDUVhBsbYVZX4+p+TFw6tPT2klKLIC/IiHeiOrPUnyfKiwBTv3W7/P/OAb+aM8YAhRnzbT4r/nTHA36XX/wVYl5LNMvnXVQAAAABJRU5ErkJggg==">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="app.css">
+    <meta name="theme-color" content="#7c5cff" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f7fb" media="(prefers-color-scheme: light)">
+    <meta name="description" content="Kraven Game — پلتفرم فارسی معرفی بازی‌های ویدیویی: نقد و بررسی، اخبار گیم، راهنمای نصب، تقویم عرضه و مقایسه بازی‌ها.">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Kraven Game؛ پلتفرم مدرن معرفی بازی‌های ویدیویی، اخبار، نقد و بررسی، آموزش و تقویم عرضه.">
+    <meta name="theme-color" content="#7c5cff" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f7fb" media="(prefers-color-scheme: light)">
+    <meta property="og:locale" content="fa_IR">
+    <link rel="manifest" href="manifest.json">
+<meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kraven Game">
+    <meta property="og:title" content="Kraven Game | پلتفرم معرفی بازی‌های ویدیویی">
+    <meta property="og:description" content="جدیدترین و بهترین بازی‌ها را کشف کنید: نقد و بررسی، اخبار، آموزش و تقویم عرضه.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/aminabedi68/Estedad@master/fonts/Estedad-font-face.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="./v17.css">
+    <link rel="stylesheet" href="./v21.css">
+    <link rel="stylesheet" href="v25.css">
+</head>
+<body data-theme="1">
+      <div id="kraven-v22-upgrade" data-version="V23" aria-hidden="true"></div>
+
+    <div class="soft-rgb-bg" aria-hidden="true">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+    </div>
+
+    <div id="scroll-progress"></div>
+
+    <div id="loading-screen">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">KRAVEN GAME</div>
+    </div>
+
+    <button class="scroll-top-btn" id="scroll-top-btn" title="بازگشت به بالا">⬆️</button>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <div id="confirm-dialog" class="confirm-dialog">
+        <div class="confirm-box">
+            <div class="icon" id="confirm-icon">⚠️</div>
+            <h3 id="confirm-title">آیا مطمئن هستید؟</h3>
+            <p id="confirm-message">این عملیات قابل بازگشت نیست.</p>
+            <div class="confirm-actions">
+                <button class="btn btn-danger" id="confirm-yes">بله</button>
+                <button class="btn" id="confirm-no">انصراف</button>
+            </div>
+        </div>
+    </div>
+
+    <header id="main-header">
+        <div class="logo" id="logo" title="Kraven Game">
+            <img src="kraven-header.webp" alt="Kraven Game" style="height:64px;width:auto;display:block;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.45);">
+        </div>
+        <div class="header-actions">
+            <button class="icon-btn tooltip" data-tooltip="تغییر تم" id="theme-btn" title="تغییر تم">🎨</button>
+            <button class="icon-btn tooltip" data-tooltip="تمام‌صفحه" id="fullscreen-btn" title="تمام‌صفحه">⛶</button>
+            <button class="icon-btn tooltip" data-tooltip="بازی تصادفی" id="random-btn" title="بازی تصادفی">🎲</button>
+            <span class="icon-wrap">
+                <button class="icon-btn tooltip" data-tooltip="جستجوی پیشرفته" id="global-search-btn" title="جستجو">🔍</button>
+            </span>
+            <span class="icon-wrap" id="notif-wrap" style="display:none;">
+                <button class="icon-btn tooltip" data-tooltip="اعلان‌ها" id="notif-btn" title="اعلان‌ها">🔔</button>
+                <span class="notif-badge" id="notif-count" style="display:none;">0</span>
+                <div class="dropdown-panel" id="notif-panel" style="display:none;">
+                    <div class="dd-head"><span>اعلان‌ها</span><button class="btn btn-sm" onclick="window._markAllNotifsRead()">خواندن همه</button></div>
+                    <div class="dd-body" id="notif-list"></div>
+                </div>
+            </span>
+            <span class="icon-wrap" id="user-wrap" style="display:none;position:relative;">
+                <span class="user-badge" id="user-badge-btn"></span>
+                <div class="dropdown-panel user-menu-panel" id="user-menu" style="display:none;">
+                    <div class="um-item" onclick="window._go('profile')">👤 پروفایل من</div>
+                    <div class="um-item" onclick="window._go('bookmarks')">🔖 بوکمارک‌ها</div>
+                    <div class="um-item" onclick="window._go('requests')">📥 درخواست بازی</div>
+                    <div class="um-item" onclick="window._logout()">🚪 خروج</div>
+                </div>
+            </span>
+            <span id="guest-auth-btn-wrap" style="display:none;">
+                <button class="btn btn-primary btn-sm" id="guest-auth-btn" onclick="window._openAuth()">🔑 ورود / ثبت‌نام</button>
+            </span>
+            <button class="icon-btn hamburger" id="hamburger-btn" title="منو">☰</button>
+        </div>
+    </header>
+
+    <div class="ad-slot" id="ad-slot-top"></div>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <div class="sidebar-menu" id="sidebar-menu">
+        <div class="sidebar-header">
+            <h3>منو</h3>
+            <button class="sidebar-close" id="sidebar-close">✕</button>
+        </div>
+        <div class="sidebar-nav">
+            <a href="#" data-page="home" class="active"><span class="menu-icon">🏠</span> خانه</a>
+            <a href="#" data-page="favorites"><span class="menu-icon">❤️</span> علاقه‌مندی‌ها</a>
+            <a href="#" data-page="news"><span class="menu-icon">📰</span> اخبار</a>
+            <a href="#" data-page="about"><span class="menu-icon">📖</span> درباره ما</a>
+            <a href="#" data-page="contact"><span class="menu-icon">📞</span> تماس با ما</a>
+            <a href="#" data-page="faq"><span class="menu-icon">❓</span> سوالات متداول</a>
+            <a href="#" data-page="tutorials"><span class="menu-icon">📚</span> آموزش‌ها</a>
+            <a href="#" data-page="compare"><span class="menu-icon">⚖️</span> مقایسه بازی‌ها</a>
+            <a href="#" data-page="calendar"><span class="menu-icon">📅</span> تقویم عرضه</a>
+            <a href="#" data-page="admin" id="admin-nav-link" style="display:none;"><span class="menu-icon">🔧</span> مدیریت</a>
+        </div>
+        <div class="ad-slot" id="ad-slot-sidebar"></div>
+        <button id="install-app-btn" class="btn" style="margin:0 var(--spacing-md) var(--spacing-md);align-items:center;justify-content:center;gap:8px;">📲 نصب اپلیکیشن</button>
+        <div class="sidebar-footer">Made with ❤️ by Amirali</div>
+    </div>
+
+    <div id="theme-modal" class="modal-overlay">
+        <div class="modal">
+            <h2>انتخاب تم</h2>
+            <div class="theme-selector" id="theme-selector">
+                <div class="theme-dot" data-theme="1" style="background: linear-gradient(135deg, #6c5ce7, #fd79a8);"></div>
+                <div class="theme-dot" data-theme="2" style="background: linear-gradient(135deg, #e17055, #00cec9);"></div>
+                <div class="theme-dot" data-theme="3" style="background: linear-gradient(135deg, #00b894, #74b9ff);"></div>
+                <div class="theme-dot" data-theme="4" style="background: linear-gradient(135deg, #0984e3, #fd79a8);"></div>
+                <div class="theme-dot" data-theme="5" style="background: linear-gradient(135deg, #e84393, #6c5ce7);"></div>
+                <div class="theme-dot" data-theme="6" style="background: linear-gradient(135deg, #fdcb6e, #00b894);"></div>
+                <div class="theme-dot" data-theme="7" style="background: linear-gradient(135deg, #00cec9, #a29bfe);"></div>
+                <div class="theme-dot" data-theme="8" style="background: linear-gradient(135deg, #d63031, #6c5ce7);"></div>
+                <div class="theme-dot" data-theme="9" style="background: linear-gradient(135deg, #2d3436, #b2bec3);"></div>
+                <div class="theme-dot" data-theme="10" style="background: linear-gradient(135deg, #6c5ce7, #fdcb6e);"></div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn" id="theme-close">بستن</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin-login-modal" class="modal-overlay">
+        <div class="modal">
+            <div class="lock-icon">🔐</div>
+            <h2>ورود مدیر</h2>
+            <p style="color:var(--text-secondary);font-size:0.85rem;margin:0;">برای دسترسی به پنل مدیریت، رمز عبور را وارد کنید</p>
+            <input type="password" id="admin-login-pass" placeholder="رمز عبور مدیر" autocomplete="off" />
+            <div class="admin-login-error" id="admin-login-error"></div>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="window._submitAdminLogin()">ورود</button>
+                <button class="btn" onclick="window._closeAdminLogin()">انصراف</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="auth-modal" class="modal-overlay">
+        <div class="modal" style="max-width:430px;">
+            <h2 id="auth-modal-title">ورود به Kraven Game</h2>
+            <div class="auth-tabs">
+                <button id="auth-tab-login" class="active" onclick="window._authTab('login')">ورود</button>
+                <button id="auth-tab-register" onclick="window._authTab('register')">ثبت‌نام</button>
+            </div>
+
+            <div id="auth-form-login">
+                <label class="form-label">نام کاربری یا ایمیل</label>
+                <input class="form-input" id="auth-login-id" autocomplete="username" placeholder="username یا email" />
+                <label class="form-label">رمز عبور</label>
+                <input class="form-input" type="password" id="auth-login-pass" autocomplete="current-password" placeholder="••••••••" />
+            </div>
+            <div id="auth-form-register" style="display:none;">
+                <label class="form-label">نام کاربری *</label>
+                <input class="form-input" id="auth-reg-username" placeholder="مثلاً kraven_fan" />
+                <label class="form-label">نام نمایشی (اختیاری)</label>
+                <input class="form-input" id="auth-reg-display" placeholder="نامی که دیگران می‌بینند" />
+                <label class="form-label">ایمیل *</label>
+                <input class="form-input" type="email" id="auth-reg-email" placeholder="example@email.com" />
+                <label class="form-label">رمز عبور (حداقل ۶ کاراکتر) *</label>
+                <input class="form-input" type="password" id="auth-reg-pass" placeholder="••••••••" />
+            </div>
+            <div id="auth-error" style="color:#fab1a0;font-size:0.82rem;min-height:20px;font-family:var(--font);"></div>
+            <div class="modal-actions">
+                <button class="btn btn-primary" id="auth-submit-btn" onclick="window._authSubmit()">ورود</button>
+                <button class="btn" onclick="window._closeAuth()">انصراف</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="search-overlay" class="search-overlay">
+        <div class="search-box">
+            <input id="global-search-input" placeholder="جستجو در بازی‌ها، اخبار، آموزش‌ها و سوالات..." autocomplete="off" />
+            <div class="search-filters">
+                <select id="gs-type">
+                    <option value="">همه</option>
+                    <option value="game">بازی‌ها</option>
+                    <option value="news">اخبار</option>
+                    <option value="tutorial">آموزش‌ها</option>
+                    <option value="faq">سوالات</option>
+                </select>
+                <select id="gs-genre"><option value="">همه ژانرها</option></select>
+                <select id="gs-year"><option value="">همه سال‌ها</option></select>
+                <select id="gs-rating">
+                    <option value="">همه امتیازها</option>
+                    <option value="9">۹ به بالا</option>
+                    <option value="8">۸ به بالا</option>
+                    <option value="7">۷ به بالا</option>
+                </select>
+                <button class="btn btn-sm" onclick="window._closeSearch()">✕ بستن</button>
+            </div>
+            <div class="search-results" id="gs-results"></div>
+        </div>
+    </div>
+
+    <div id="privacy-shield">
+        <div class="shield-icon">🛡️</div>
+        <h2>محتوای محافظت‌شده</h2>
+        <p>گرفتن اسکرین‌شات، کپی یا چاپ این صفحه مجاز نیست</p>
+    </div>
+
+    <main>
+        <div class="page active" id="page-home">
+            <div class="page-header">
+                <h1>بازی‌های ویدیویی</h1>
+                <p>جدیدترین و بهترین بازی‌ها را کشف کنید</p>
+            </div>
+            
+            <section id="v16-hero" class="v16-hero" aria-label="Kraven Spotlight">
+                <div class="v16-hero-bg"></div>
+                <div class="v16-hero-glow"></div>
+                <div class="v16-hero-content">
+                    <div class="v16-kicker"><span class="v16-live-dot"></span> KRAVEN SPOTLIGHT</div>
+                    <h2 id="v16-hero-title">در حال بارگذاری...</h2>
+                    <p id="v16-hero-desc">بهترین تجربه‌های گیمینگ را کشف کنید.</p>
+                    <div id="v16-hero-meta" class="v16-hero-meta"></div>
+                    <div class="v16-hero-actions">
+                        <button class="v16-primary" id="v16-hero-open">مشاهده بازی <span>←</span></button>
+                        <button class="v16-ghost" id="v16-hero-random">🎲 یک بازی تصادفی</button>
+                    </div>
+                </div>
+                <div class="v16-hero-score"><span>KRAVEN SCORE</span><strong id="v16-score">—</strong><small>/ 10</small></div>
+            </section>
+            <section class="v16-metrics" aria-label="Kraven statistics">
+                <div><b id="v16-games-total">—</b><span>بازی در آرشیو</span></div>
+                <div><b id="v16-genres-total">—</b><span>ژانر مختلف</span></div>
+                <div><b id="v16-news-total">—</b><span>خبر و محتوا</span></div>
+                <div><b>24/7</b><span>دسترسی به Kraven</span></div>
+            </section>
+
+            <div id="home-trending" style="display:none;"></div>
+
+            <div class="featured-section-title">🏆 برترین بازی‌ها</div>
+            <div class="featured-slider" id="featured-slider">
+                <div class="featured-slides" id="featured-slides"></div>
+                <button class="featured-nav prev" onclick="window._featuredNav(-1)">❮</button>
+                <button class="featured-nav next" onclick="window._featuredNav(1)">❯</button>
+                <div class="featured-dots" id="featured-dots"></div>
+            </div>
+
+            <div class="ad-slot" id="ad-slot-content"></div>
+
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <input type="text" id="search-input" placeholder="جستجوی بازی..." aria-label="جستجوی بازی" />
+                    <span class="search-icon" aria-hidden="true">🔍</span>
+                </div>
+                <select id="genre-filter" aria-label="فیلتر ژانر"><option value="">همه ژانرها</option></select>
+                <select id="sort-filter" aria-label="مرتب‌سازی">
+                    <option value="newest">جدیدترین</option>
+                    <option value="oldest">قدیمی‌ترین</option>
+                    <option value="rating">بیشترین امتیاز</option>
+                    <option value="likes">بیشترین لایک</option>
+                    <option value="updated">آخرین به‌روزرسانی</option>
+                    <option value="az">الفبا (A-Z)</option>
+                    <option value="za">الفبا (Z-A)</option>
+                </select>
+            </div>
+            <div id="games-count" class="games-count" aria-live="polite"></div>
+            <div id="games-grid" class="games-grid"></div>
+            <nav id="games-pagination" class="pagination" aria-label="صفحه‌بندی بازی‌ها"></nav>
+            <div id="games-empty" class="empty-state" style="display:none;">
+                <div class="icon">🎮</div>
+                <h3>بازی‌ای یافت نشد</h3>
+                <p>فیلترها را تغییر دهید یا اولین بازی را از پنل مدیریت اضافه کنید</p>
+                <button class="btn btn-primary" onclick="window._clearGameFilters()">پاک کردن فیلترها</button>
+            </div>
+
+            <div id="home-recent" style="display:none;"></div>
+        </div>
+
+        <div class="page" id="page-game-detail">
+            <div class="breadcrumb" id="game-breadcrumb">
+                <a data-page="home">خانه</a><span>›</span><span id="breadcrumb-title">جزئیات بازی</span>
+            </div>
+            <div id="game-detail-content"></div>
+        </div>
+
+        <div class="page" id="page-favorites">
+            <div class="page-header"><h1>علاقه‌مندی‌ها</h1><p>بازی‌هایی که لایک کرده‌اید</p></div>
+            <div id="favorites-grid" class="games-grid"></div>
+            <div id="favorites-empty" class="empty-state">
+                <div class="icon">💔</div><h3>هنوز بازی‌ای لایک نکرده‌اید</h3><p>روی قلب بازی‌ها کلیک کنید</p>
+            </div>
+        </div>
+
+        <div class="page" id="page-news">
+            <div class="page-header"><h1>اخبار</h1><p>آخرین اخبار دنیای گیم</p></div>
+            <div id="news-list" class="news-list"></div>
+            <div id="news-empty" class="empty-state" style="display:none;">
+                <div class="icon">📰</div><h3>خبری ثبت نشده</h3><p>اولین خبر را از پنل مدیریت اضافه کنید</p>
+            </div>
+        </div>
+
+        <div class="page" id="page-news-detail">
+            <div class="breadcrumb" id="news-breadcrumb">
+                <a data-page="home">خانه</a><span>›</span><a data-page="news">اخبار</a><span>›</span><span id="news-breadcrumb-title">خبر</span>
+            </div>
+            <div id="news-detail-content"></div>
+        </div>
+
+        <div class="page" id="page-about">
+            <div class="page-header"><h1>درباره Kraven Game</h1></div>
+            <div class="game-detail">
+                <div class="game-detail-section"><h3>📖 داستان ما</h3><p>Kraven Game در سال ۱۴۰۲ با هدف ایجاد یک پلتفرم جامع برای معرفی بازی‌های ویدیویی شکل گرفت.</p></div>
+                <div class="game-detail-section"><h3>🎯 هدف ما</h3><p>ما می‌خواهیم Kraven Game به مرجع اصلی گیمرهای فارسی‌زبان تبدیل شود.</p></div>
+            </div>
+        </div>
+
+        <div class="page" id="page-contact">
+            <div class="page-header"><h1>تماس با ما</h1><p>نظرات و پیشنهادات خود را با ما در میان بگذارید</p></div>
+            <div class="game-detail">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group"><label>نام شما *</label><input type="text" id="contact-name" required placeholder="نام خود را وارد کنید" /></div>
+                    <div class="form-group"><label>ایمیل *</label><input type="email" id="contact-email" required placeholder="example@email.com" /></div>
+                    <div class="form-group">
+                        <label>موضوع *</label>
+                        <select id="contact-subject" required>
+                            <option value="">انتخاب موضوع...</option>
+                            <option value="پیشنهاد">پیشنهاد</option>
+                            <option value="انتقاد">انتقاد</option>
+                            <option value="گزارش مشکل">گزارش مشکل</option>
+                            <option value="سایر">سایر</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>پیام *</label><textarea id="contact-message" required placeholder="پیام خود را بنویسید..." rows="6"></textarea></div>
+                    <button type="submit" class="btn btn-primary">ارسال پیام</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="page" id="page-faq">
+            <div class="page-header"><h1>سوالات متداول</h1><p>پاسخ سوالات پرتکرار</p></div>
+            <div id="faq-list"></div>
+        </div>
+
+        <div class="page" id="page-tutorials">
+            <div class="page-header"><h1>آموزش‌ها</h1><p>آموزش‌های مفید برای گیمرها</p></div>
+            <div id="tutorials-list"></div>
+        </div>
+
+        <div class="page" id="page-compare">
+            <div class="page-header"><h1>مقایسه بازی‌ها</h1><p>حداکثر ۳ بازی را برای مقایسه انتخاب کنید</p></div>
+            <div id="compare-content"></div>
+        </div>
+
+        <div class="page" id="page-profile">
+            <div id="profile-content"></div>
+        </div>
+
+        <div class="page" id="page-bookmarks">
+            <div class="page-header"><h1>🔖 بوکمارک‌های من</h1><p>بازی‌ها و محتوای ذخیره‌شده شما</p></div>
+            <div id="bookmarks-content"></div>
+        </div>
+
+        <div class="page" id="page-requests">
+            <div class="page-header"><h1>📥 درخواست بازی</h1><p>بازی مورد نظرتان را درخواست دهید و وضعیت آن را دنبال کنید</p></div>
+            <div id="requests-content"></div>
+        </div>
+
+        <div class="page" id="page-calendar">
+            <div class="page-header"><h1>📅 تقویم عرضه بازی‌ها</h1><p>بازی‌های در راه را دنبال کنید</p></div>
+            <div id="calendar-content"></div>
+        </div>
+
+        <div class="page" id="page-admin">
+            <div class="page-header"><h1>پنل مدیریت</h1><p>مدیریت کامل سایت</p></div>
+            <div class="admin-panel">
+                <div class="admin-stats" id="admin-stats">
+                    <div class="stat-card"><div class="stat-value" id="stat-games">0</div><div class="stat-label">بازی‌ها</div></div>
+                    <div class="stat-card"><div class="stat-value" id="stat-news">0</div><div class="stat-label">اخبار</div></div>
+                    <div class="stat-card"><div class="stat-value" id="stat-likes">0</div><div class="stat-label">لایک‌ها</div></div>
+                    <div class="stat-card"><div class="stat-value" id="stat-views">0</div><div class="stat-label">بازدیدها</div></div>
+                    <div class="stat-card"><div class="stat-value" id="stat-messages">0</div><div class="stat-label">پیام‌ها</div></div>
+                </div>
+                <div class="admin-tabs" id="admin-tabs">
+                    <button class="admin-tab active" data-tab="games">🎮 بازی‌ها</button>
+                    <button class="admin-tab" data-tab="news">📰 اخبار</button>
+                    <button class="admin-tab" data-tab="tutorials">📚 آموزش‌ها</button>
+                    <button class="admin-tab" data-tab="faq">❓ سوالات متداول</button>
+                    <button class="admin-tab" data-tab="chatbot">💬 چت‌بات</button>
+                    <button class="admin-tab" data-tab="messages">📧 پیام‌ها</button>
+                    <button class="admin-tab" data-tab="ads">📢 تبلیغات</button>
+                    <button class="admin-tab" data-tab="dashboard">📊 آمار و نمودار</button>
+                    <button class="admin-tab" data-tab="users">👥 کاربران</button>
+                    <button class="admin-tab" data-tab="requests">📥 درخواست‌ها</button>
+                    <button class="admin-tab" data-tab="reports">🚩 گزارش‌ها</button>
+                    <button class="admin-tab" data-tab="releases">📅 تقویم عرضه</button>
+                    <button class="admin-tab" data-tab="activity">📜 فعالیت‌ها</button>
+                    <button class="admin-tab" data-tab="settings">⚙️ تنظیمات</button>
+                </div>
+                <div id="admin-content"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="ad-slot" id="ad-slot-bottom"></div>
+
+    <footer>
+        <div class="footer-line">Made with <span class="footer-heart">❤️</span> by Amirali</div>
+        <div class="footer-line">Copyright ©️ 2026 Kraven Game</div>
+    </footer>
+
+    <div class="chatbot-panel" id="chatbot-panel">
+        <div class="chatbot-header">
+            <span>💬 سوالات متداول</span>
+            <button class="icon-btn" id="chatbot-close" style="width:28px;height:28px;font-size:0.9rem;background:transparent;border:none;color:white;cursor:pointer;">✕</button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <div class="typing-indicator" id="typing-indicator">
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+        </div>
+        <div class="quick-replies" id="quick-replies"></div>
+    </div>
+    <div class="chatbot-widget">
+        <button class="chatbot-btn" id="chatbot-toggle" title="سوالات متداول">💬</button>
+    </div>
+
+    <div class="lightbox-overlay" id="lightbox-overlay">
+        <button class="lightbox-close" id="lightbox-close">✕</button>
+        <button class="lightbox-nav prev" id="lightbox-prev">❮</button>
+        <img id="lightbox-img" src="" alt="" />
+        <button class="lightbox-nav next" id="lightbox-next">❯</button>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <div class="compare-bar" id="compare-bar">
+        <div class="compare-bar-games" id="compare-bar-games">هنوز بازی‌ای برای مقایسه انتخاب نشده</div>
+        <div style="display:flex;gap:var(--spacing-sm);">
+            <button class="btn" id="compare-clear-btn">پاک کردن</button>
+            <button class="btn btn-primary" id="compare-view-btn">مقایسه کن</button>
+        </div>
+    </div>
+
+    <script>
+    (function () {
+        'use strict';
+        var fine = window.matchMedia('(pointer: fine)').matches;
+        var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* ---- 1. Cursor glow + sparkle trail (desktop, fine pointer only) ---- */
+        if (fine && !reduced) {
+            var glow = document.createElement('div');
+            glow.id = 'cursor-glow';
+            document.body.appendChild(glow);
+
+            var gx = innerWidth / 2, gy = innerHeight / 2, tx = gx, ty = gy, running = false;
+
+            function tick() {
+                gx += (tx - gx) * 0.12;
+                gy += (ty - gy) * 0.12;
+                glow.style.transform = 'translate(' + gx + 'px,' + gy + 'px)';
+                if (Math.abs(tx - gx) > 0.3 || Math.abs(ty - gy) > 0.3) {
+                    requestAnimationFrame(tick);
+                } else {
+                    running = false;
+                }
+            }
+
+            var lastDot = 0;
+            document.addEventListener('mousemove', function (e) {
+                tx = e.clientX; ty = e.clientY;
+                glow.classList.add('on');
+                if (!running) { running = true; requestAnimationFrame(tick); }
+                var now = Date.now();
+                if (now - lastDot > 90) {
+                    lastDot = now;
+                    var d = document.createElement('div');
+                    d.className = 'fx-dot';
+                    d.style.left = e.clientX + 'px';
+                    d.style.top = e.clientY + 'px';
+                    d.style.background = Math.random() > 0.5 ? 'rgba(108,92,231,0.9)' : 'rgba(253,121,168,0.9)';
+                    document.body.appendChild(d);
+                    setTimeout(function () { d.remove(); }, 950);
+                }
+            }, { passive: true });
+
+            document.addEventListener('mouseleave', function () { glow.classList.remove('on'); });
+        }
+
+        /* ---- 2. Subtle 3D tilt on game cards ---- */
+        if (fine && !reduced) {
+            var MAX_TILT = 4;
+            document.addEventListener('pointermove', function (e) {
+                var card = e.target.closest ? e.target.closest('.game-card') : null;
+                if (!card) return;
+                var r = card.getBoundingClientRect();
+                var px = (e.clientX - r.left) / r.width - 0.5;
+                var py = (e.clientY - r.top) / r.height - 0.5;
+                card.classList.add('fx-tilt');
+                card.style.transform = 'perspective(900px) rotateX(' + (-py * MAX_TILT).toFixed(2) + 'deg) rotateY(' + (px * MAX_TILT).toFixed(2) + 'deg) translateY(-2px)';
+            }, { passive: true });
+
+            document.addEventListener('pointerout', function (e) {
+                var card = e.target.closest ? e.target.closest('.game-card') : null;
+                if (card && !card.contains(e.relatedTarget)) {
+                    card.classList.remove('fx-tilt');
+                    card.style.transform = '';
+                }
+            }, { passive: true });
+        }
+
+        /* ---- 3. Ripple on buttons ---- */
+        document.addEventListener('click', function (e) {
+            var btn = e.target.closest ? e.target.closest('.btn') : null;
+            if (!btn || reduced) return;
+            var r = btn.getBoundingClientRect();
+            var size = Math.max(r.width, r.height);
+            var span = document.createElement('span');
+            span.className = 'fx-ripple';
+            span.style.width = span.style.height = size + 'px';
+            span.style.left = (e.clientX - r.left - size / 2) + 'px';
+            span.style.top = (e.clientY - r.top - size / 2) + 'px';
+            btn.appendChild(span);
+            setTimeout(function () { span.remove(); }, 650);
+        }, { passive: true });
+
+        /* ---- 4. Fade-in images as they load ---- */
+        document.addEventListener('load', function (e) {
+            var t = e.target;
+            if (t && t.tagName === 'IMG' && !t.classList.contains('fx-img')) {
+                t.classList.add('fx-img');
+                void t.offsetWidth;
+                requestAnimationFrame(function () { t.classList.add('fx-loaded'); });
+            }
+        }, true);
+
+        /* ---- 5. Mark images already in DOM from bfcache/instant loads ---- */
+        document.addEventListener('DOMContentLoaded', function () {
+            var imgs = document.images;
+            for (var i = 0; i < imgs.length; i++) {
+                if (imgs[i].complete && imgs[i].naturalWidth > 0) {
+                    imgs[i].classList.add('fx-img', 'fx-loaded');
+                }
+            }
+        });
+    })();
+    </script>
+    <script src="app.js?v=25.1"></script>
+    <link rel="stylesheet" href="v18.css">
+    <link rel="stylesheet" href="v19.css">
+    <link rel="stylesheet" href="v20.css">
+    <script src="v17-enhancements.js"></script>
+    <script src="v18-enhancements.js"></script>
+    <script src="v19-enhancements.js"></script>
+    <script src="v21-enhancements.js"></script>
+    <link rel="stylesheet" href="v22.css">
+    <script src="v22-enhancements.js"></script>
+    <link rel="stylesheet" href="v23.css">
+    <script src="v23-enhancements.js"></script>
+    <link rel="stylesheet" href="arcade.css">
+    <script src="kraven-arcade.js"></script>
+    <script src="v25-enhancements.js"></script>
+</body>
+</html>

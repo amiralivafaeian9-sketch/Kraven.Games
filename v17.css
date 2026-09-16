@@ -1,0 +1,121 @@
+/* =========================================================
+   KRAVEN GAME V17 — Motion Background + Click SFX UI
+   Lightweight, mobile-first, no external dependencies.
+   ========================================================= */
+
+#kraven-motion-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.kraven-motion-orb {
+  --mx: 0px;
+  --my: 0px;
+  --m-scale: 1;
+  position: absolute;
+  width: min(34vw, 460px);
+  height: min(34vw, 460px);
+  left: 7%;
+  top: 15%;
+  border-radius: 50%;
+  transform: translate3d(var(--mx), var(--my), 0) scale(var(--m-scale));
+  will-change: transform;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255,255,255,.24) 0 2%, transparent 8%),
+    radial-gradient(circle at 64% 62%, rgba(37,217,255,.24) 0, rgba(124,92,255,.13) 29%, rgba(124,92,255,0) 66%);
+  filter: blur(28px);
+  opacity: .42;
+  transition: opacity .35s ease;
+}
+
+.kraven-motion-orb::before,
+.kraven-motion-orb::after {
+  content: '';
+  position: absolute;
+  inset: 12%;
+  border-radius: inherit;
+  background: radial-gradient(circle at 34% 36%, rgba(124,92,255,.40), transparent 58%);
+}
+
+.kraven-motion-orb::after {
+  inset: 24%;
+  background: radial-gradient(circle at 62% 42%, rgba(37,217,255,.22), transparent 62%);
+  filter: blur(18px);
+}
+
+.kraven-motion-core {
+  position: absolute;
+  width: 25%;
+  aspect-ratio: 1;
+  left: 38%;
+  top: 36%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,.52), rgba(124,92,255,.25) 30%, rgba(37,217,255,.08) 62%, transparent 74%);
+  box-shadow: 0 0 70px rgba(124,92,255,.26), 0 0 115px rgba(37,217,255,.10);
+  animation: kraven-orb-breathe 5.2s ease-in-out infinite;
+}
+
+@keyframes kraven-orb-breathe {
+  0%, 100% { transform: scale(.92); opacity: .68; }
+  50% { transform: scale(1.08); opacity: .95; }
+}
+
+#kraven-motion-control {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 1200;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  color: #eef1f9;
+  background: rgba(8, 11, 19, .72);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 14px 42px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  font: 800 .72rem var(--font, system-ui, sans-serif);
+}
+
+#kraven-motion-control.show { display: inline-flex; }
+
+#kraven-motion-control button {
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: #fff;
+  background: linear-gradient(135deg, #7658ff, #a05fff);
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#kraven-motion-control[data-state="on"] { border-color: rgba(73,230,168,.26); }
+#kraven-motion-control[data-state="on"] button { background: rgba(73,230,168,.14); color: #9af1c9; }
+
+.kraven-sfx-ready { --kraven-sfx-scale: 1; }
+.kraven-sfx-pop { animation: kraven-sfx-pop .12s ease-out; }
+@keyframes kraven-sfx-pop {
+  50% { transform: scale(calc(var(--kraven-sfx-scale) * .985)); }
+}
+
+@media (max-width: 900px) {
+  #kraven-motion-layer { z-index: -1; }
+  .kraven-motion-orb { width: 62vw; height: 62vw; left: -15%; top: 13%; opacity: .34; filter: blur(24px); }
+}
+
+@media (max-width: 600px) {
+  #kraven-motion-control { right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kraven-motion-core { animation: none; }
+  .kraven-motion-orb { transition: none; }
+  #kraven-motion-control { display: none !important; }
+}

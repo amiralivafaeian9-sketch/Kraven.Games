@@ -1,0 +1,75 @@
+/* KRAVEN V25 — LIQUID GLASS UNIVERSE */
+:root{
+  --v25-glass-bg: linear-gradient(135deg, rgba(255,255,255,.105), rgba(255,255,255,.035));
+  --v25-glass-bg-strong: linear-gradient(135deg, rgba(255,255,255,.15), rgba(255,255,255,.055));
+  --v25-glass-border: rgba(255,255,255,.16);
+  --v25-glass-highlight: rgba(255,255,255,.22);
+  --v25-glass-shadow: 0 18px 55px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.06);
+  --v25-glass-blur: 22px;
+  --v25-glass-sat: 155%;
+}
+html.kraven-light{
+  --v25-glass-bg: linear-gradient(135deg, rgba(255,255,255,.82), rgba(246,248,255,.57));
+  --v25-glass-bg-strong: linear-gradient(135deg, rgba(255,255,255,.94), rgba(241,245,255,.70));
+  --v25-glass-border: rgba(90,108,150,.15);
+  --v25-glass-highlight: rgba(255,255,255,.88);
+  --v25-glass-shadow: 0 18px 50px rgba(52,64,92,.12), inset 0 1px 0 rgba(255,255,255,.85);
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(38rem 24rem at 12% 8%,rgba(124,92,246,.12),transparent 65%),radial-gradient(34rem 24rem at 88% 18%,rgba(0,210,255,.10),transparent 62%),radial-gradient(34rem 26rem at 50% 100%,rgba(236,72,153,.06),transparent 65%);}
+
+/* Shared Liquid Glass language */
+:is(.navbar,.header,.topbar,.sidebar,.panel,.card,.modal-content,.modal-dialog,.dropdown-menu,.popover,.tooltip,.settings-panel,.search-panel,.command-palette,.profile-card,.section,.content-card,.news-card,.game-card,.featured-card,.glass-card,.kraven-arcade-card,.kraven-arcade-badge,.kraven-arcade-shell,.kraven-arcade-dialog,.kraven-arcade-controls,.toast,.notification,.v23-card-preview){
+  background:var(--v25-glass-bg)!important;
+  border-color:var(--v25-glass-border)!important;
+  box-shadow:var(--v25-glass-shadow)!important;
+  -webkit-backdrop-filter:blur(var(--v25-glass-blur)) saturate(var(--v25-glass-sat));
+  backdrop-filter:blur(var(--v25-glass-blur)) saturate(var(--v25-glass-sat));
+}
+:is(.navbar,.header,.topbar,.sidebar,.panel,.card,.modal-content,.modal-dialog,.dropdown-menu,.popover,.settings-panel,.search-panel,.command-palette,.profile-card,.section,.content-card,.news-card,.game-card,.featured-card,.glass-card,.kraven-arcade-card){position:relative;isolation:isolate;overflow:hidden;}
+:is(.panel,.card,.content-card,.news-card,.game-card,.featured-card,.glass-card,.kraven-arcade-card)::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(125deg,rgba(255,255,255,.09),transparent 28%,transparent 72%,rgba(124,92,246,.06));opacity:.8;z-index:-1;}
+:is(button,.btn,.nav-link,.chip,.tag,.filter-chip,.kraven-arcade-play,.kraven-arcade-primary,.kraven-arcade-secondary,.kraven-arcade-pause,.kraven-arcade-close){
+  -webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);
+}
+:is(button,.btn,.nav-link,.chip,.tag,.filter-chip,.kraven-arcade-play,.kraven-arcade-primary,.kraven-arcade-secondary,.kraven-arcade-pause,.kraven-arcade-close):not(.icon-only){border:1px solid var(--v25-glass-border)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 8px 22px rgba(0,0,0,.08);}
+:is(.game-card,.news-card,.content-card,.kraven-arcade-card,.featured-card){transition:transform .42s cubic-bezier(.16,1,.3,1),box-shadow .42s ease,border-color .3s ease,background .3s ease;}
+:is(.game-card,.news-card,.content-card,.kraven-arcade-card,.featured-card):hover{transform:translateY(-6px);box-shadow:0 28px 75px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.09)!important;}
+html.kraven-light :is(.game-card,.news-card,.content-card,.kraven-arcade-card,.featured-card):hover{box-shadow:0 24px 60px rgba(55,75,115,.16),inset 0 1px 0 rgba(255,255,255,.95)!important;}
+:is(input,textarea,select){background:var(--v25-glass-bg)!important;border:1px solid var(--v25-glass-border)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 24px rgba(0,0,0,.06)!important;-webkit-backdrop-filter:blur(16px) saturate(145%);backdrop-filter:blur(16px) saturate(145%);}
+
+/* Floating glass header */
+:is(.navbar,.header,.topbar){background:rgba(8,10,18,.52)!important;}
+html.kraven-light :is(.navbar,.header,.topbar){background:rgba(255,255,255,.70)!important;}
+
+/* Home sections: glass shells */
+#page-home > section,
+#page-home > div[class*="section"],
+#page-home .featured-section,
+#page-home .home-section,
+#page-home .section-block,
+#page-home .content-section{border-radius:24px;}
+
+/* Scroll reveal */
+.v25-reveal{opacity:0;transform:translate3d(0,52px,0) scale(.985);filter:blur(8px);transition:opacity .72s cubic-bezier(.2,.78,.2,1),transform .92s cubic-bezier(.16,1,.3,1),filter .72s cubic-bezier(.2,.78,.2,1);will-change:opacity,transform,filter;}
+.v25-reveal.v25-visible{opacity:1;transform:none;filter:none;}
+.v25-reveal[data-v25-delay="1"]{transition-delay:70ms}.v25-reveal[data-v25-delay="2"]{transition-delay:140ms}.v25-reveal[data-v25-delay="3"]{transition-delay:210ms}.v25-reveal[data-v25-delay="4"]{transition-delay:280ms}.v25-reveal[data-v25-delay="5"]{transition-delay:350ms}
+.v25-reveal-group > .v25-reveal:nth-child(1){transition-delay:0ms}.v25-reveal-group > .v25-reveal:nth-child(2){transition-delay:70ms}.v25-reveal-group > .v25-reveal:nth-child(3){transition-delay:140ms}.v25-reveal-group > .v25-reveal:nth-child(4){transition-delay:210ms}.v25-reveal-group > .v25-reveal:nth-child(5){transition-delay:280ms}.v25-reveal-group > .v25-reveal:nth-child(6){transition-delay:350ms}
+
+/* Arcade glass-specific */
+#kraven-mini-arcade{padding:22px;border-radius:28px;background:linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid var(--v25-glass-border);box-shadow:var(--v25-glass-shadow);-webkit-backdrop-filter:blur(22px) saturate(145%);backdrop-filter:blur(22px) saturate(145%);}
+html.kraven-light #kraven-mini-arcade{background:linear-gradient(135deg,rgba(255,255,255,.80),rgba(243,246,255,.52));}
+.kraven-arcade-card{background:var(--v25-glass-bg)!important;}
+.kraven-arcade-modal{background:rgba(4,6,12,.72)!important;-webkit-backdrop-filter:blur(18px) saturate(130%);backdrop-filter:blur(18px) saturate(130%);}
+html.kraven-light .kraven-arcade-modal{background:rgba(235,240,250,.62)!important;}
+.kraven-arcade-shell{background:var(--v25-glass-bg-strong)!important;}
+
+/* Don't animate the dedicated game viewport itself */
+.kraven-arcade-stage canvas,.kraven-arcade-stage .kraven-arcade-domgame{filter:none!important;}
+
+@media (max-width:760px){
+  :is(.panel,.card,.content-card,.news-card,.game-card,.featured-card,.glass-card,.kraven-arcade-card){-webkit-backdrop-filter:blur(16px) saturate(145%);backdrop-filter:blur(16px) saturate(145%);}
+  #kraven-mini-arcade{padding:14px;border-radius:22px;}
+}
+@media (prefers-reduced-motion:reduce){
+  .v25-reveal{opacity:1!important;transform:none!important;filter:none!important;transition:none!important;}
+  :is(.game-card,.news-card,.content-card,.kraven-arcade-card,.featured-card):hover{transform:none;}
+}
